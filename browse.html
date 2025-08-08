@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- metadata for engagement -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Browse a variety of delicious, user-submitted recipes on Kitchen Bites." />
+  <meta name="keywords" content="browse recipes, kitchen bites, food ideas, meals, home cooking, popular recipes" />
+  <meta name="author" content="Juan Garcia" />
+  <title>Kitchen Bites — Browse Recipes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- nav bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a class="nav-logo" href="index.html" aria-label="Kitchen Bites Home">🍴 <span>Kitchen Bites</span></a>
+      </div>
+      <div class="nav-center" role="menubar" aria-label="Primary links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="browse.html">Browse Recipes</a>
+        <a class="nav-link" href="submit.html">Submit a Recipe</a>
+      </div>
+      <div class="nav-right">
+        <!-- Search field -->
+        <form class="search-form" action="browse.html" method="get" role="search" aria-label="Search recipes">
+          <input type="search" name="q" placeholder="Search recipes..." aria-label="Search recipes" />
+          <button type="submit">Search</button>
+        </form>
+        <a class="login-link" href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page heading -->
+  <header class="page-hero">
+    <h1 class="hero-title">Browse Recipes</h1>
+    <p class="hero-sub">Explore all different kinds of recipes.</p>
+  </header>
+
+  <main>
+    <!-- Recipe grid section -->
+    <section class="trending-section" aria-labelledby="browse-heading">
+      <h2 id="browse-heading" class="section-title">All Recipes</h2>
+
+      <div class="trending-grid">
+        <article class="trend-card">
+          <img src="images/beefandbroccoli.jpg" alt="beefandbroccoli" />
+          <h4 class="recipe-title">Beef and Broccoli</h4>
+          <p class="recipe-desc small">Classic Chinese dish.</p>
+          <a class="full-recipe-button" href="beefandbroccoli.html">Full Recipe</a>
+        </article>
+
+        <article class="trend-card">
+          <img src="images/chocolatecake.jpg" alt="Triple chocolate cake" />
+          <h4 class="recipe-title">Triple Chocolate Cake</h4>
+          <p class="recipe-desc small">Fudgy and indulgent, perfect for dessert lovers.</p>
+          <a class="full-recipe-button" href="recipe-cake.html">Full Recipe</a>
+        </article>
+
+        <article class="trend-card">
+          <img src="images/parmesanpasta.jpg" alt="Creamy garlic parmesan pasta" />
+          <h4 class="recipe-title">Creamy Garlic Parmesan Pasta</h4>
+          <p class="recipe-desc small">Velvety sauce and fresh herbs.</p>
+          <a class="full-recipe-button" href="recipe-garlic-pasta.html">Full Recipe</a>
+        </article>
+
+        <article class="trend-card">
+          <img src="images/avocadoegg.jpg" alt="Avocado toast with egg" />
+          <h4 class="recipe-title">Avocado Toast with Egg</h4>
+          <p class="recipe-desc small">Quick, filling, and full of flavor.</p>
+          <a class="full-recipe-button" href="recipe-avocado-toast.html">Full Recipe</a>
+        </article>
+      </div>
+
+      <!-- see all recipes button -->
+      <div style="text-align:center; margin-top:20px;">
+        <a class="full-recipe-button" href="all-recipes.html">See All Recipes</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kitchen Bites — Created by Juan Garcia</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,317 @@
+
+/* color variables, makes it so much easier for changing colors  */
+:root{
+  --cream: #fffbea;         /* background for page body */
+  --light-yellow: #fff9d6;  /* navbar and header sections */
+  --card-yellow: #fffdd0;   /* alternate card background */
+  --accent: #cc6600;        /* button/link accent */
+  --black: #111;            /* border and text contrast */
+}
+
+/* reset */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* body styles  */
+body{
+  font-family: Arial, sans-serif;
+  background-color: var(--cream);
+  color: #333;
+  line-height: 1.45;
+}
+
+/* navbar styling */
+.navbar{
+  background-color: var(--light-yellow);
+  border-bottom: 2px solid var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 100; /* keeps navbar above content */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nav-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.nav-left { 
+  display:flex; 
+  align-items:center; 
+  gap:0.5rem; 
+}
+
+.nav-logo{
+  font-weight:700;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Center section of navbar */
+.nav-center{
+  display:flex;
+  gap: 0.5rem;
+  justify-content:center;
+  flex: 1 1 auto;
+}
+
+.nav-link{
+  color: var(--black);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight:600;
+}
+
+.nav-link:hover, 
+.nav-link.active{
+  background-color: rgba(0,0,0,0.04);
+}
+
+/* right side of navbar, the search and login*/
+.nav-right{
+  display:flex;
+  gap: 0.5rem;
+  align-items:center;
+}
+
+/* Search form */
+.search-form{
+  display:flex;
+  gap: 6px;
+  align-items:center;
+}
+
+.search-form input[type="search"]{
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 140px;
+}
+
+.search-form button{
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--black);
+  background-color: #fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.login-link{
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration:none;
+  color:var(--black);
+  border: 2px solid var(--black);
+  background: var(--light-yellow);
+}
+
+/*  hero sections */
+.page-hero{
+  text-align:center;
+  padding: 22px 12px;
+}
+
+.hero-title{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.hero-sub{ 
+  color:#555; 
+  font-style: italic; 
+}
+
+/* Section titles for consistent look across pages */
+.section-title{
+  font-size: 20px;
+  margin: 8px 0 12px;
+  text-align:left;
+  max-width:1100px;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 0 1rem;
+}
+
+/* featured recipes and two-card layout for desktops */
+.featured-section{ 
+  padding: 8px 0 20px; 
+}
+
+.featured-container{
+  max-width:1100px;
+  margin: 0 auto;
+  display:flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.featured-card{
+  background-color: var(--card-yellow);
+  border: 2px solid var(--black);
+  border-radius: 16px;
+  padding: 12px;
+  width: calc(50% - 10px);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.06);
+  display:flex;
+  flex-direction:column;
+  align-items: stretch;
+}
+
+.featured-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
+  border:1px solid #ddd;
+}
+
+.featured-title{
+  font-size: 20px;
+  color: #3a2f00;
+  margin-bottom:6px;
+}
+
+.featured-desc{ 
+  color:#444; 
+  margin-bottom:10px; 
+}
+
+/*  trending recipe grid and responsive card layout */
+.trending-section{ 
+  padding: 8px 0 20px; 
+}
+
+.trending-grid{
+  max-width:1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.trend-card{
+  background-color: var(--card-yellow);
+  border: 2px solid var(--black);
+  border-radius: 14px;
+  padding: 12px;
+  text-align:center;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.trend-card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.recipe-title{ 
+  font-size:18px; 
+  color:#3a2f00; 
+  margin:0; 
+}
+
+.recipe-desc.small{ 
+  font-size:14px; 
+  color:#555; 
+  font-style: italic; 
+}
+
+/*  buttons  */
+.full-recipe-button{
+  display:inline-block;
+  margin-top:auto; /* pushes button to bottom when possible */
+  background-color: #ffe57f;
+  color:#222;
+  padding:8px 14px;
+  border-radius: 12px;
+  border: 2px solid #111;
+  text-decoration:none;
+  font-weight:700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.full-recipe-button:hover{
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.12);
+}
+
+/* info */
+.info-box{
+  max-width:1100px;
+  margin: 18px auto;
+  padding: 16px;
+  background: var(--card-yellow);
+  border-radius: 14px;
+  border: 2px solid var(--black);
+  box-shadow: 2px 2px rgba(0,0,0,0.04);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*  footer */
+footer{
+  text-align:center;
+  margin-top: 20px;
+  padding: 12px;
+  border-top: 2px solid var(--black);
+  background: var(--light-yellow);
+  color:#222;
+}
+
+/*  for responsiveness */
+@media (max-width: 900px){
+  .featured-card img{ height:160px; }
+  .nav-center{ justify-content: center; gap: 8px; }
+  .search-form input[type="search"]{ min-width: 120px; }
+}
+
+@media (max-width: 700px){
+  /* Stack navbar vertically */
+  .nav-container{ 
+    flex-direction: column; 
+    align-items: stretch; 
+    gap:0.6rem; 
+    padding: 0.6rem 0.8rem; 
+  }
+  .nav-center{ order: 3; justify-content: space-around; flex-wrap:wrap; }
+  .nav-right{ order: 2; justify-content: flex-end; gap:0.4rem; }
+
+  /* Featured recipes stack */
+  .featured-container{ flex-direction: column; }
+  .featured-card{ width: 100%; }
+
+  /* Trending grid to become a single-column */
+  .trending-grid{ grid-template-columns: 1fr; }
+  .trend-card img{ height: 180px; }
+  .featured-card img{ height: 220px; }
+  .search-form{ width:100%; display:flex; gap:6px; }
+  .search-form input{ flex:1; width:auto; }
+}
+
+@media (max-width: 420px){
+  .hero-title{ font-size: 22px; }
+  .site-title{ font-size: 18px; }
+  .featured-card img{ height: 180px; }
+  .trend-card img{ height: 140px; }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- metadata -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Submit your own recipe to share with the Kitchen Bites community." />
+  <meta name="keywords" content="submit recipe, share recipe, kitchen bites, food, cooking" />
+  <meta name="author" content="Juan Garcia" />
+  <title>Kitchen Bites — Submit a Recipe</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- nav bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a class="nav-logo" href="index.html" aria-label="Kitchen Bites Home">🍴 <span>Kitchen Bites</span></a>
+      </div>
+
+      <div class="nav-center" role="menubar" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="browse.html">Browse Recipes</a>
+        <a class="nav-link active" href="submit.html">Submit a Recipe</a>
+      </div>
+
+      <div class="nav-right">
+        <!-- search field sends queries to browse page -->
+        <form class="search-form" action="browse.html" method="get" role="search" aria-label="Search recipes">
+          <input type="search" name="q" placeholder="Search recipes..." aria-label="Search recipes" />
+          <button type="submit">Search</button>
+        </form>
+        <a class="login-link" href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- page heading -->
+  <header class="page-hero">
+    <h1 class="hero-title">Submit Your Recipe</h1>
+    <p class="hero-sub">Fill out the form to share your dish!</p>
+  </header>
+
+  <main>
+    <!-- form area for recipe submission -->
+    <section class="info-box" aria-labelledby="submit-heading">
+      <h2 id="submit-heading" class="section-title">Recipe Submission Form</h2>
+      <form action="thank-you.html" method="post" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:12px;">
+
+        <!-- recipe title input -->
+        <label for="recipe-title"><strong>Recipe Title</strong></label>
+        <input type="text" id="recipe-title" name="recipe-title" placeholder="e.g., Classic Homemade Lasagna" required />
+
+        <!--  description -->
+        <label for="description"><strong>Short Description</strong></label>
+        <textarea id="description" name="description" rows="3" placeholder="Briefly describe your recipe..." required></textarea>
+
+        <!-- ingredients text area -->
+        <label for="ingredients"><strong>Ingredients</strong></label>
+        <textarea id="ingredients" name="ingredients" rows="5" placeholder="List each ingredient on a new line..." required></textarea>
+
+        <!-- cooking instructions -->
+        <label for="instructions"><strong>Instructions</strong></label>
+        <textarea id="instructions" name="instructions" rows="6" placeholder="Step-by-step cooking instructions..." required></textarea>
+
+        <!-- image upload -->
+        <label for="image"><strong>Upload an Image</strong></label>
+        <input type="file" id="image" name="image" accept="image/*" />
+
+        <!-- submit button -->
+        <button type="submit" class="full-recipe-button" style="align-self:flex-start;">Submit Recipe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Kitchen Bites — Created by Juan Garcia</p>
+  </footer>
+</body>
+</html>

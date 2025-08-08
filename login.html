@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- metadata for page info and SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Kitchen Bites - Login or create an account to share recipes." />
+  <meta name="keywords" content="login, sign up, create account, recipes, kitchen bites" />
+  <meta name="author" content="Juan Garcia" />
+  <title>Kitchen Bites — Login</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a class="nav-logo" href="index.html" aria-label="Kitchen Bites Home">🍴 <span>Kitchen Bites</span></a>
+      </div>
+      <div class="nav-center" role="menubar" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="browse.html">Browse Recipes</a>
+        <a class="nav-link" href="submit.html">Submit a Recipe</a>
+      </div>
+      <div class="nav-right">
+        <!-- site search -->
+        <form class="search-form" action="browse.html" method="get" role="search" aria-label="Search recipes">
+          <input type="search" name="q" placeholder="Search recipes..." aria-label="Search recipes" />
+          <button type="submit">Search</button>
+        </form>
+        <a class="login-link" href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero header -->
+  <header class="page-hero">
+    <h1 class="hero-title">Welcome Back!</h1>
+    <p class="hero-sub">Login to share your recipes or create an account to join our community.</p>
+  </header>
+
+  <main>
+    <!-- login and signup forms -->
+    <section class="auth-section" aria-labelledby="auth-heading">
+      <div class="auth-container">
+        <!-- login form -->
+        <article class="auth-card">
+          <h2 id="auth-heading">Login</h2>
+          <form action="#" method="post" class="auth-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <button type="submit" class="full-recipe-button">Login</button>
+          </form>
+        </article>
+
+        <!-- signup form -->
+        <article class="auth-card">
+          <h2>Create Account</h2>
+          <form action="#" method="post" class="auth-form">
+            <label for="signup-name">Full Name:</label>
+            <input type="text" id="signup-name" name="signup-name" required>
+
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="signup-email" required>
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+
+            <button type="submit" class="full-recipe-button">Sign Up</button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Kitchen Bites — Created by Juan Garcia</p>
+  </footer>
+
+  <!-- form styling -->
+  <style>
+    .auth-section {
+      padding: 20px 1rem;
+    }
+    .auth-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .auth-card {
+      background-color: var(--card-yellow);
+      border: 2px solid var(--black);
+      border-radius: 16px;
+      padding: 16px;
+      flex: 1 1 300px;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.06);
+    }
+    .auth-card h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #3a2f00;
+    }
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .auth-form label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .auth-form input {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .auth-form button {
+      margin-top: 8px;
+    }
+  </style>
+</body>
+</html>
